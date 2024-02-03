@@ -11,57 +11,67 @@ import RemovePage from '../pages/Remove';
 import FixPage from '../pages/Fix';
 import StockPage from '../pages/Stock';
 import AddPage from '../pages/Add';
+import Layout from './Layout';
 
 const router = createBrowserRouter([
-	{ index: true, path: '/', element: <HomePage /> },
 	{
-		path: 'auth',
+		path: '/',
+		element: <Layout />,
 		children: [
 			{
-				path: 'login',
-				element: <LoginPage />,
+				path: '',
+				element: <HomePage />,
 			},
 			{
-				path: 'register',
-				element: <RegisterPage />,
+				path: 'auth',
+				children: [
+					{
+						path: 'login',
+						element: <LoginPage />,
+					},
+					{
+						path: 'register',
+						element: <RegisterPage />,
+					},
+				],
 			},
-		],
-	},
-	{ path: 'myinfo', element: <MyInfoPage /> },
-	{
-		path: 'book',
-		children: [
+			{ path: 'myinfo', element: <MyInfoPage /> },
 			{
-				path: 'check',
-				element: <CheckPage />,
-			},
-			{
-				path: 'rent',
-				element: <RentPage />,
-			},
-			{
-				path: 'buy',
-				element: <BuyPage />,
-			},
-			{
-				path: 'return',
-				element: <ReturnPage />,
-			},
-			{
-				path: 'Remove',
-				element: <RemovePage />,
-			},
-			{
-				path: 'fix',
-				element: <FixPage />,
-			},
-			{
-				path: 'stock',
-				element: <StockPage />,
-			},
-			{
-				path: 'add',
-				element: <AddPage />,
+				path: 'book',
+				children: [
+					{
+						path: 'check',
+						element: <CheckPage />,
+					},
+					{
+						path: 'rent',
+						element: <RentPage />,
+					},
+					{
+						path: 'buy',
+						element: <BuyPage />,
+					},
+					{
+						path: 'return',
+						element: <ReturnPage />,
+					},
+					{
+						path: 'Remove',
+						element: <RemovePage />,
+					},
+					{
+						path: 'fix',
+						element: <FixPage />,
+					},
+					{
+						path: 'stock',
+						element: <StockPage />,
+					},
+					{
+						path: 'add',
+						element: <AddPage />,
+					},
+				],
 			},
 		],
 	},

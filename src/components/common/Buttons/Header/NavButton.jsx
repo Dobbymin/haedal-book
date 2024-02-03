@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const RegisterButton = ({ link, children }) => {
+const NavButton = ({ link, children }) => {
 	return (
 		<button
 			id="registerButton"
@@ -11,4 +11,4 @@ const RegisterButton = ({ link, children }) => {
 	);
 };
 
-export default RegisterButton;
+export default NavButton;

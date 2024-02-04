@@ -12,13 +12,13 @@ import RemovePage from '../pages/Remove';
 import FixPage from '../pages/Fix';
 import StockPage from '../pages/Stock';
 import AddPage from '../pages/Add';
-import Layout from './Layout';
+// import Layout from './Layout';
 // import BookNavBar from '../components/organisms/BookNavBar/BookNavBar';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Layout />,
+		// element: <Layout />,
 		children: [
 			{
 				path: '',

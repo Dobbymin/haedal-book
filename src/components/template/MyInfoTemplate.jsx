@@ -1,14 +1,14 @@
 const MyInfoTemplate = () => {
 	let titleInactiveStyle =
-		'inline-block px-[100px] py-[7px] bg-[#C7C7C7] font-light text-[20px] border-b-2 border-transparent hover:text-[#FF7E00] hover:border-gray-300';
+		'inline-block px-[80px] sm:px-[100px] py-[7px] bg-[#C7C7C7] font-light text-[17px] sm:text-[20px] border-b-2 border-transparent hover:text-[#FF7E00] hover:border-gray-300';
 	let titleActiveStyle =
-		'inline-block px-[100px] py-[7px] text-[20px] font-bold active text-[#FF7E00] border-[#FF7E00]';
-	//navbar 곡선부분 오른쪽으로 설정해뒀는데 나중에 동적으로 바꿔
+		'inline-block px-[80px] sm:px-[100px] py-[7px] text-[17px] sm:text-[20px] font-bold active text-[#FF7E00] border-[#FF7E00]';
+
 	let listStyle = 'border-b-[1px] py-[10px]';
 	return (
 		<>
-			<div className="flex justify-center mt-[50px]">
-				<div className="leftSide flex-col">
+			<div className="md:flex justify-center mt-[50px]">
+				<div className="leftSide flex-col mb-[50px]">
 					<div className="bookListNavBar text-sm font-medium text-center text-gray-500">
 						<ul className="flex border-b-[1px] border-[#FF7E00]">
 							<li>
@@ -37,7 +37,7 @@ const MyInfoTemplate = () => {
 						</ol>
 					</div>
 				</div>
-				<div className="rightSide flex-col ml-[90px] w-[489px]">
+				<div className="rightSide flex-col sm:ml-[90px] w-[489px]">
 					<div className="infoSector">
 						<div className="infoTitle flex justify-between pb-[7px] border-b-[1px] border-[#FF7E00] font-medium">
 							<a className="inline-block font-bold text-[20px] text-[#FF7E00] border-transparent rounded-t-lg">

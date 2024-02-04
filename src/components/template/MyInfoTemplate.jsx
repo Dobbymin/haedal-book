@@ -1,8 +1,9 @@
 const MyInfoTemplate = () => {
 	let titleInactiveStyle =
-		'inline-block px-[100px] py-[7px] bg-[#C7C7C7] font-light text-[20px] border-b-2 border-transparent rounded-tr-md hover:text-[#FF7E00] hover:border-gray-300';
+		'inline-block px-[100px] py-[7px] bg-[#C7C7C7] font-light text-[20px] border-b-2 border-transparent hover:text-[#FF7E00] hover:border-gray-300';
 	let titleActiveStyle =
-		'inline-block px-[100px] py-[7px] text-[20px] font-bold rounded-tr-md active text-[#FF7E00] border-[#FF7E00]';
+		'inline-block px-[100px] py-[7px] text-[20px] font-bold active text-[#FF7E00] border-[#FF7E00]';
+	//navbar 곡선부분 오른쪽으로 설정해뒀는데 나중에 동적으로 바꿔
 	let listStyle = 'border-b-[1px] py-[10px]';
 	return (
 		<>
@@ -11,12 +12,16 @@ const MyInfoTemplate = () => {
 					<div className="bookListNavBar text-sm font-medium text-center text-gray-500">
 						<ul className="flex border-b-[1px] border-[#FF7E00]">
 							<li>
-								<a href="#" className={titleActiveStyle}>
+								<a href="#" className={`${titleActiveStyle} rounded-tl-lg`}>
 									빌린 책 조회
 								</a>
 							</li>
 							<li>
-								<a href="#" className={titleInactiveStyle} aria-current="page">
+								<a
+									href="#"
+									className={`${titleInactiveStyle} rounded-tr-lg`}
+									aria-current="page"
+								>
 									구매한 책 조회
 								</a>
 							</li>

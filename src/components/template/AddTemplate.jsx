@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import BookNavBar from '../organisms/BookNavBar/BookNavBar';
 import Header from '../organisms/Header/Header';
 
@@ -7,8 +8,8 @@ const AddTemplate = () => {
 		<>
 			<Header />
 			<BookNavBar />
-			<div className="flex justify-center">
-				<div className="contentsContainer flex-col">
+			<div className="flex justify-center mb-14">
+				<div className="contentsContainer flex-col ">
 					<div className="dataContainer flex">
 						<div className="bookImg mr-[20px]">
 							<img
@@ -44,7 +45,7 @@ const AddTemplate = () => {
 										id="title"
 										className="border-[1px] w-[207px] h-[20px] rounded-md me-2"
 									/>
-									<span>원</span>
+									<span className="text-xs">원</span>
 								</li>
 								<li>
 									<p className="text-xs my-[5px]">출판일</p>
@@ -59,33 +60,43 @@ const AddTemplate = () => {
 						</div>
 					</div>
 					<div className="category">
-						<p>카테고리</p>
+						<p className="my-[10px]">카테고리</p>
 
 						<ul className="flex flex-wrap items-center text-[#C7C7C7]">
 							<li>
-								<a href="#" className={categoryStyle}>
+								<Link to="#" className={categoryStyle}>
 									판타지
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className={categoryStyle}>
+								<Link to="#" className={categoryStyle}>
 									로맨스
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a href="#" className={categoryStyle}>
+								<Link to="#" className={categoryStyle}>
 									호러
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
-					<div className="description">
-						<p>설명</p>
+					<div className="description flex-col">
+						<div className="descriptionLabel">
+							<p className="my-[10px]">설명</p>
+						</div>
 						<textarea
 							name="description"
 							id=""
-							className="w-[439px] h-[80px] border-[1px] rounded-md"
+							className="w-[439px] h-[80px] border-[1px] rounded-md mb-[30px]"
 						></textarea>
+						<div className="apply text-center">
+							<Link
+								href="#"
+								className="px-[10px] py-[5px] text-[#FF7E00] border-[1px] border-[#FF7E00] rounded-md"
+							>
+								책 등록하기
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,28 +1,97 @@
 const MyInfoTemplate = () => {
+	let titleInactiveStyle =
+		'inline-block px-[100px] py-[7px] bg-[#C7C7C7] font-light text-[20px] border-b-2 border-transparent rounded-tr-md hover:text-[#FF7E00] hover:border-gray-300';
+	let titleActiveStyle =
+		'inline-block px-[100px] py-[7px] text-[20px] font-bold rounded-tr-md active text-[#FF7E00] border-[#FF7E00]';
+	let listStyle = 'border-b-[1px] py-[10px]';
 	return (
 		<>
-			MyInfoTemplate
-			<div className="flex">
-				<div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-					<ul class="flex flex-wrap -mb-px">
-						<li class="me-2">
+			<div className="flex justify-center mt-[50px]">
+				<div className="leftSide flex-col">
+					<div className="bookListNavBar text-sm font-medium text-center text-gray-500">
+						<ul className="flex border-b-[1px] border-[#FF7E00]">
+							<li>
+								<a href="#" className={titleActiveStyle}>
+									빌린 책 조회
+								</a>
+							</li>
+							<li>
+								<a href="#" className={titleInactiveStyle} aria-current="page">
+									구매한 책 조회
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div className="bookListContents pl-5">
+						<ol className="list-decimal">
+							<li className={listStyle}>토비의 스프링</li>
+							<li className={listStyle}>IT 5분 백과사전</li>
+							<li className={listStyle}>클린코드</li>
+							<li className={listStyle}>모던 자바스크립트 Deep Dive</li>
+							<li className={listStyle}>HTTP 완벽 가이드</li>
+						</ol>
+					</div>
+				</div>
+				<div className="rightSide flex-col ml-[90px] w-[489px]">
+					<div className="infoSector">
+						<div className="infoTitle flex justify-between pb-[7px] border-b-[1px] border-[#FF7E00] font-medium">
+							<a className="inline-block font-bold text-[20px] text-[#FF7E00] border-transparent rounded-t-lg">
+								내 정보
+							</a>
+							<button className="bg-[#FF7E00] px-[15px] rounded-md text-white text-[12px]">
+								조회
+							</button>
+						</div>
+						<div className="infoList">
+							<ul>
+								<li className={listStyle}>이름: 홍길동</li>
+								<li className={listStyle}>나이: 0세</li>
+								<li className={listStyle}>이메일: example123@knu.ac.kr</li>
+								<li className={listStyle}>
+									<span className="mr-[20px]">보유한 돈: 123,000 원</span>
+									<button className="text-[#FF7E00] font-semibold">
+										새로고침
+									</button>
+								</li>
+								<li className="flex justify-end">
+									<button className="text-[#FF7E00] font-semibold my-[10px] ">
+										회원 탈퇴
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div className="moneySector mt-[30px]">
+						<div className="moneyTitle border-b-[1px] border-[#FF7E00] py-[7px]">
 							<a
 								href="#"
-								class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+								className="inline-block font-bold text-[20px] text-[#FF7E00] border-transparent rounded-t-lg"
 							>
-								빌린책 조회
+								돈 충전하기
 							</a>
-						</li>
-						<li class="me-2">
-							<a
-								href="#"
-								class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
-								aria-current="page"
-							>
-								구매한 책 조회
-							</a>
-						</li>
-					</ul>
+						</div>
+						<div className="moneyList">
+							<ul>
+								<li className={listStyle}>
+									<span className="mr-1">충전할 금액: </span>
+									<input
+										type="number"
+										name="money input"
+										id="moneyInput"
+										className="mr-1 border border-gray-300 rounded-md"
+									/>
+									<span className="mx-2">원</span>
+									<button className="text-[#FF7E00] font-semibold">
+										충전하기
+									</button>
+								</li>
+								<li className={listStyle}>
+									<span className="mr-1">충전 후 보유한 돈: </span>
+									133,000원
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</>

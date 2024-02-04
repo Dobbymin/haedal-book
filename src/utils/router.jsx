@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+
 import HomePage from '../pages/Home';
 import LoginPage from '../pages/Login';
 import RegisterPage from '../pages/Register';
@@ -12,6 +13,7 @@ import FixPage from '../pages/Fix';
 import StockPage from '../pages/Stock';
 import AddPage from '../pages/Add';
 import Layout from './Layout';
+// import BookNavBar from '../components/organisms/BookNavBar/BookNavBar';
 
 const router = createBrowserRouter([
 	{
@@ -38,6 +40,7 @@ const router = createBrowserRouter([
 			{ path: 'myinfo', element: <MyInfoPage /> },
 			{
 				path: 'book',
+				// element: <BookNavBar />,
 				children: [
 					{
 						path: 'check',

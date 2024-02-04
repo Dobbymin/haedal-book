@@ -1,5 +1,4 @@
 import MyInfoTemplate from '../components/template/MyInfoTemplate';
-
 const MyInfoPage = () => {
 	return (
 		<>

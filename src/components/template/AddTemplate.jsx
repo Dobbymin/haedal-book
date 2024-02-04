@@ -1,3 +1,4 @@
+import BookInfo from '../organisms/BookInfo/BookInfo';
 import BookNavBar from '../organisms/BookNavBar/BookNavBar';
 import Header from '../organisms/Header/Header';
 
@@ -6,7 +7,7 @@ const AddTemplate = () => {
 		<>
 			<Header />
 			<BookNavBar />
-			<div>AddTemplate</div>
+			<BookInfo type="add" />
 		</>
 	);
 };

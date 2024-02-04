@@ -1,5 +1,14 @@
+import BookNavBar from '../organisms/BookNavBar/BookNavBar';
+import Header from '../organisms/Header/Header';
+
 const StockTemplate = () => {
-	return <>StockTemplate</>;
+	return (
+		<>
+			<Header />
+			<BookNavBar />
+			<div>StockTemplate</div>
+		</>
+	);
 };
 
 export default StockTemplate;

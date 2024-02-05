@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const CustonButton = ({ route, children }) => {
+export const ControlBtn = ({ route, children }) => {
 	return (
 		<div className="apply text-center">
 			<Link
